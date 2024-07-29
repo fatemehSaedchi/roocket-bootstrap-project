@@ -14,6 +14,13 @@
     <link rel="stylesheet" href="./style/fonts/bootstrap-icons.css">
     <link rel="stylesheet" href="./style/css/themify-icons.css">
     <link rel="stylesheet" href="./style/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css">
+
+    <style>
+        .swiper-slide{
+            width: 300px !important;
+        }
+    </style>
 
 </head>
 <body>
@@ -358,11 +365,28 @@
             <small>گالری</small>
             <h3>تصاویر اپلیکیشن</h3>
         </div>
-        <div class="img-gallery owl-carousel owl-theme m-3">
-            <img src="./img/screen1.jpg" alt="screen1">
-            <img src="./img/screen2.jpg" alt="screen2">
-            <img src="./img/screen3.jpg" alt="screen3">
-            <img src="./img/screen1.jpg" alt="screen4">
+        <div class="appSlider">
+            <div class="mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="./img/screen1.jpg" alt="screen1">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/screen2.jpg" alt="screen2">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/screen3.jpg" alt="screen3">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="./img/screen1.jpg" alt="screen4">
+                    </div>
+                </div>
+
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+
+                <div class="swiper-pagination"></div>
+            </div>
         </div>
     </div>
 </div>
@@ -372,5 +396,20 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"></script>
 <script src="./style/js/owl.carousel.min.js"></script>
 <script src="./style/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+<script>
+    let swiper = new Swiper('.mySwiper', {
+        slidesPerView: 3,
+        spaceBetween: 100,
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+</script>
 </body>
 </html>

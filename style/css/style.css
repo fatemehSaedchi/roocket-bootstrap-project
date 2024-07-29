@@ -409,3 +409,7 @@ header {
 .img-gallery .owl-item.center {
     transform: scale(1);
 }
+
+.swiper-slide{
+    width: 300px !important;
+}
